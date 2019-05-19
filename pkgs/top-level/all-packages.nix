@@ -6530,6 +6530,9 @@ in
 
   time = callPackage ../tools/misc/time { };
 
+  timetrack-cli = haskell.lib.justStaticExecutables
+    (haskellPackages.callPackage ../tools/misc/timetrack-cli { });
+
   tweet-hs = haskell.lib.justStaticExecutables haskellPackages.tweet-hs;
 
   qfsm = callPackage ../applications/science/electronics/qfsm { };
